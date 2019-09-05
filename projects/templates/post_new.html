@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Upload Post</title>
   </head>
-  <body>
+  <body style="background-color: black;">
     <form method='POST' enctype="multipart/form-data">
     {% csrf_token %}
+    <br>
     {%for fields in form%}
+    <br>
     {{ fields }}
     <!-- {{ form|crispy }} -->
     {%endfor%}
+    <br>
     <button type="submit" name="button">upload</button>
   </form>
 
