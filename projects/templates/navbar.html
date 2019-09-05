@@ -16,13 +16,11 @@
 
 </head>
 
-<body>
+<body style="background-color: black;" >
   <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light" style='margin-bottom:50px;'>
-    <div class='container'>
+    <div class='container' style="background-color: black;">
       <div class="collapse navbar-collapse" id="navbarNav">
-        <div id="main">
-          <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ menu</span>
-        </div>
+       
 
         <form class="form-inline" role="search" action="{% url 'search_results' %}">
 
@@ -30,40 +28,54 @@
 
         </form>
         <br>
+        <br>
+        <br>
+        <br>
         <div style='margin-left:150px;float:right;'>
           <div class="style">
 
 
 
             {% if user.is_authenticated %}
-            <a href="{% url 'logout' %}">
-              <h6>LOGOUT</h6>
-            </a>
-            <a href="{% url 'post' %}"><button> Submit Your Site </button></a>
-            <!-- <a href="{% url 'profile' %}"><h6>{{user.username}}</h6></a> -->
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="{% url 'logout' %}">
+                    <h6>LOGOUT</h6>
+                    </a>
+                </div>
+            <br>
+            <br>
+                <div class="col-md-4">
+                    <a href="{% url 'post' %}"><button> Submit Your Site </button></a>
+                    <!-- <a href="{% url 'profile' %}"><h6>{{user.username}}</h6></a> -->
+                </div>
             {% else %}
-            <a href="{% url 'login' %}">
-              <h6>LOGIN</h6>
-            </a>
-            <a href="/signup">
-              <h6>SIGNUP</h6>
-            </a>
+                <div class="col-md-4">
+                    <a href="{% url 'login' %}">
+                    <h6>LOGIN</h6>
+                    </a>
+
+                    <a href="/signup">
+                    <h6>SIGNUP</h6>
+                    </a>
+                </div>
+            </div>
 
             {% endif %}
-          </div>
-          <div class="">
+        </div>
+          
 
           </div>
         </div>
       </div>
     </div>
   </nav>
-  <div id="mySidenav" class="sidenav fixed-top bg-aqua">
+  <!-- <div id="mySidenav" class="sidenav fixed-top bg-aqua">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <a href="{% url 'homePage' %}">Home</a>
     <a href="{% url 'profile' %}">Profile</a>
     <a href="{% url 'post' %}">Post Site</a>
-  </div>
+  </div> -->
 
 </body>
 
