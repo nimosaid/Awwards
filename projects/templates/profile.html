@@ -5,15 +5,18 @@
 
 <div class="container">
   <button id="button_h" type="button" class="btn btn-outline-secondary"><a href="/update">Edit Profile</a></button>
+  <br>
+  <br>
   <button id="button_h" type="button" class="btn btn-outline-secondary"><a href="{% url 'post' %}">Publish Site</a></button>
 
 
-  {% for all in my_profile%}
-  <img src="{{all.profile_photo.url}}" alt="man" width="300" height="500">
-  <h4 id="p_hhh">{{all.user_id}}</h4>
-  <h4>{{all.contacts}}</h4>
-  <h4>{{all.bio}}</h4>
+  {% for all in images%}
+  <div class="row">
+    <img src="{{all.profile_photo.url}}" alt="" width="300" height="500">
+    <h4 id="p_hhh">{{all.user_id}}</h4>
+    <h4>{{all.contacts}}</h4>
+    <h4>{{all.bio}}</h4>
   {% endfor %}
-
+  </div>
 </div>
 {%endblock%}
