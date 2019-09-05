@@ -10,6 +10,12 @@
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="{}">AWWARDS</a>
+            <div id="mySidenav" class="sidenav fixed-top bg-aqua">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="{% url 'homePage' %}">Home</a>
+                <a href="{% url 'profile' %}">Profile</a>
+                <a href="{% url 'post' %}">Post Site</a>
+            </div>
           </div>
     
           <!-- Adding a search form  -->
