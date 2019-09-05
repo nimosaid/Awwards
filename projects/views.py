@@ -37,7 +37,7 @@ def profile_path(request):
     images = Project.objects.all()
     my_profile = Profile.objects.all()
 
-    return render(request,'prof.html', locals())
+    return render(request,'profile.html', locals())
 
 
 def update(request):
