@@ -1,6 +1,6 @@
-# Awards
+# Awwards
 
-3/19/2019
+
 
 #### By **Nimo Said**
 
@@ -26,3 +26,45 @@ https://.herokuapp.com
 - Python3.6
 - Heroku
 - Django
+
+
+### Prerequisites
+To use this application, you will need:
+- git
+- python
+- django
+- postgresql
+
+### Clone the repo and checkout into the project folder.
+
+- `git clone https://github.com/nimosaid/Awwardss`
+- `cd awards`
+
+### Create and activate the virtual environment
+
+- `python3.6 -m venv virtual`
+- `source virtual/bin/activate`
+
+### Install the dependencies
+
+Install dependancies that will create an environment for the app to run.
+
+- `pip install -r requirements.txt`
+
+### Create an .env file and replace my settings with your settings:
+
+
+### Make migrations to your database
+- `python3.6 manage.py migrate`
+
+### Run `manage.py` in the terminal
+
+- `python3.6 manage.py runserver`
+
+### Known Bugs
+None at the moment
+
+### License
+Copyright (c) 2018 **Nimo Said**
+
+This project is licensed under the [MIT License](LICENSE).
